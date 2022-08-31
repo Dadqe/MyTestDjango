@@ -1,0 +1,8 @@
+{% for c in cats %}
+{% comment %} В следующей проверке if он сравниваем именно pk, т.к. в cat_selected передаёт id категории -_-. Там обращение к первому посту выбранному и обращение к cat_id. ВОПРОС, почему тогда и сранивать по slug нельзя сразу? {% endcomment %}
+	{% if c.pk == cat_selected %}
+		<li class="selected">{{c.name}}</li>
+	{% else %}
+		<li><a href="{{ c.get_absolute_url }}">{{c.name}}</a></li>
+	{% endif %}
+{% endfor %}

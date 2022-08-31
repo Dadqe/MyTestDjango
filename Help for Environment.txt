@@ -1,0 +1,9 @@
+python -m venv env (В папке test)
+source env/bin/activate (для активации виртуалки в Linux!)
+.\env\Scripts\activate (для активации виртуалки в Windows) env - это название папки, в которой находится виртуалка
+deactivate Для деактивации виртуалкиз
+
+python manage.py runserver
+
+pip freeze > requirements.txt Созадю файл с установленными библиотеками(зависимостями) для передачи вместе с исполняемыми файлами проекта
+pip install -r requirements.txt Устанавливаю необходимые библиотеки (в виртуальном окружении) для выполнения кода
